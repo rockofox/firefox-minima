@@ -1,0 +1,49 @@
+:root:not([customizing]) #TabsToolbar {
+  max-height: 17px !important;
+  margin-left: 1px !important;
+  margin-right: 1px !important;
+  font-size:12px;
+  border-radius: 0 !important;
+  padding: 0 !important;
+}
+.tabbrowser-tab * {
+  margin:0 !important;
+  padding:0 !important;
+  border-radius: 0 !important;
+  height: 15px !important;
+}
+.tabbrowser-tab {
+  min-height: 12px !important;
+}
+.tab-close-button, .new-tab-button {
+  display: none !important;
+}
+
+#tabs-newtab-button, #titlebar spacer {
+  display: none !important;
+}
+
+:root:not([customizing]) #nav-bar
+{
+  min-height : 2.5em       !important;
+  height     : 2.5em       !important;
+  margin     : 0 0 -2.5em  !important;
+  z-index    : -1000       !important;
+  opacity    : 0           !important;
+}
+
+:root:not([customizing]) #nav-bar:focus-within
+{
+  z-index    : 1000        !important;
+  opacity    : 1           !important;
+}
+
+#nav-bar{
+  border-inline: var(--uc-window-drag-space-width) solid var(--toolbar-bgcolor);
+}
+#new-tab-button, #alltabs-button, #scrollbutton-down, .tab-loading-burst{
+  display: none;
+}
+#titlebar {
+  overflow: none !important;
+}
