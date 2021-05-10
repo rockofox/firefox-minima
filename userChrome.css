@@ -1,10 +1,33 @@
+/*
+  __  __   _           _                     
+ |  \/  | (_)         (_)                    
+ | \  / |  _   _ __    _   _ __ ___     __ _ 
+ | |\/| | | | | '_ \  | | | '_ ` _ \   / _` |
+ | |  | | | | | | | | | | | | | | | | | (_| |
+ |_|  |_| |_| |_| |_| |_| |_| |_| |_|  \__,_|
+                                            
+
+*/
+
+
+/* User changable variables */
+
+:root {
+  --tab-font-size: 14px; /* Font size of the tab labels */
+  --tab-font-family: monospace; /* The font used for the tab labels */
+  --max-tab-width: none; /* The maximum width a tab in the tab bar can use. Set this to none for no limit */
+}
+
+/* Minima Source Code. Here be dragons. */
+/* Only change this if you know what you're doing */
+
 :root:not([customizing]) #TabsToolbar {
   max-height: 17px !important;
   margin-left: 1px !important;
   margin-right: 1px !important;
-  font-size:12px;
   border-radius: 0 !important;
   padding: 0 !important;
+  font-family: var(--tab-font-family);
 }
 .tabbrowser-tab * {
   margin:0 !important;
@@ -14,6 +37,10 @@
 }
 .tabbrowser-tab {
   min-height: 12px !important;
+  font-size: var(--tab-font-size) !important;
+}
+.tabbrowser-tab[fadein]:not([pinned]) {
+  max-width: var(--max-tab-width) !important;
 }
 .tab-close-button, .new-tab-button {
   display: none !important;
