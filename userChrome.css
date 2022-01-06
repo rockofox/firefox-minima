@@ -13,8 +13,8 @@
 /* User changable variables */
 
 :root {
-  --tab-font-size: 14px; /* Font size of the tab labels */
-  --tab-font-family: monospace; /* The font used for the tab labels */
+  --tab-font-size: 0.8em; /* Font size of the tab labels */
+  --tab-font-family: Noto Sans CJK JP; /* The font used for the tab labels */
   --max-tab-width: none; /* The maximum width a tab in the tab bar can use. Set this to none for no limit */
 }
 
@@ -132,4 +132,7 @@ See the above repository for updates as well as full license text. */
 }
 #nav-bar{
   border-inline: var(--uc-window-drag-space-width) solid var(--toolbar-bgcolor);
+}
+#navigator-toolbox {
+  appearance: toolbar !important; /* Pretty much anything except none */
 }
