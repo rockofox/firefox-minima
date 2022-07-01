@@ -33,7 +33,6 @@
   margin-right: 1px !important;
   border-radius: 0 !important;
   padding: 0 !important;
-  font-family: var(--tab-font-family);
 }
 .tabbrowser-tab * {
   margin:0 !important;
