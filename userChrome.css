@@ -40,6 +40,7 @@
   padding:0 !important;
   border-radius: 0 !important;
   height: 15px !important;
+  font-family: var(--tab-font-family) !important;
 }
 .tabbrowser-tab {
   min-height: 12px !important;
