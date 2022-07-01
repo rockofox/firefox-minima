@@ -14,7 +14,7 @@
 
 :root {
   --tab-font-size: 0.8em; /* Font size of the tab labels */
-  --tab-font-family: Noto Sans CJK JP; /* The font used for the tab labels */
+  --tab-font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; /* The font used for the tab labels */
   --max-tab-width: none; /* The maximum width a tab in the tab bar can use. Set this to none for no limit */
   --show-titlebar-buttons: none; /* Hide the buttons (close/minimize/maximize) in the title bar. Required on some platforms (e.g macOS) to fully hide the title bar. `none` hides them, `block` shows them */
 }
