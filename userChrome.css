@@ -16,10 +16,16 @@
   --tab-font-size: 0.8em; /* Font size of the tab labels */
   --tab-font-family: Noto Sans CJK JP; /* The font used for the tab labels */
   --max-tab-width: none; /* The maximum width a tab in the tab bar can use. Set this to none for no limit */
+  --show-titlebar-buttons: none; /* Hide the buttons (close/minimize/maximize) in the title bar. Required on some platforms (e.g macOS) to fully hide the title bar. `none` hides them, `block` shows them */
 }
 
 /* Minima Source Code. Here be dragons. */
 /* Only change this if you know what you're doing */
+
+.titlebar-buttonbox-container {
+	display: var(--show-titlebar-buttons);
+}
+
 
 :root:not([customizing]) #TabsToolbar {
   max-height: 17px !important;
