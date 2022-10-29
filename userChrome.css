@@ -13,10 +13,10 @@
 /* User changable variables */
 
 :root {
-  --tab-font-size: 0.8em; /* Font size of the tab labels */
-  --tab-font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; /* The font used for the tab labels */
-  --max-tab-width: none; /* The maximum width a tab in the tab bar can use. Set this to none for no limit */
-  --show-titlebar-buttons: none; /* Hide the buttons (close/minimize/maximize) in the title bar. Required on some platforms (e.g macOS) to fully hide the title bar. `none` hides them, `block` shows them */
+	--tab-font-size: 0.8em; /* Font size of the tab labels */
+	--tab-font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; /* The font used for the tab labels */
+	--max-tab-width: none; /* The maximum width a tab in the tab bar can use. Set this to none for no limit */
+	--show-titlebar-buttons: none; /* Hide the buttons (close/minimize/maximize) in the title bar. Required on some platforms (e.g macOS) to fully hide the title bar. `none` hides them, `block` shows them */
 }
 
 /* Minima Source Code. Here be dragons. */
@@ -28,57 +28,57 @@
 
 
 :root:not([customizing]) #TabsToolbar {
-  max-height: 17px !important;
-  margin-left: 1px !important;
-  margin-right: 1px !important;
-  border-radius: 0 !important;
-  padding: 0 !important;
+	max-height: 17px !important;
+	margin-left: 1px !important;
+	margin-right: 1px !important;
+	border-radius: 0 !important;
+	padding: 0 !important;
 }
 .tabbrowser-tab * {
-  margin:0 !important;
-  padding:0 !important;
-  border-radius: 0 !important;
-  height: 15px !important;
-  font-family: var(--tab-font-family) !important;
+	margin:0 !important;
+	padding:0 !important;
+	border-radius: 0 !important;
+	height: 15px !important;
+	font-family: var(--tab-font-family) !important;
 }
 .tabbrowser-tab {
-  min-height: 12px !important;
-  font-size: var(--tab-font-size) !important;
+	min-height: 12px !important;
+	font-size: var(--tab-font-size) !important;
 }
 .tabbrowser-tab[fadein]:not([pinned]) {
-  max-width: var(--max-tab-width) !important;
+	max-width: var(--max-tab-width) !important;
 }
-.tab-close-button, .new-tab-button {
-  display: none !important;
+.tab-close-button, .new-tab-button, #firefox-view-button {
+	display: none !important;
 }
 
 #tabs-newtab-button, #titlebar spacer {
-  display: none !important;
+	display: none !important;
 }
 
 :root:not([customizing]) #nav-bar
 {
-  min-height : 2.5em       !important;
-  height     : 2.5em       !important;
-  margin     : 0 0 -2.5em  !important;
-  z-index    : -1000       !important;
-  opacity    : 0           !important;
+	min-height : 2.5em       !important;
+	height     : 2.5em       !important;
+	margin     : 0 0 -2.5em  !important;
+	z-index    : -1000       !important;
+	opacity    : 0           !important;
 }
 
 :root:not([customizing]) #nav-bar:focus-within
 {
-  z-index    : 1000        !important;
-  opacity    : 1           !important;
+	z-index    : 1000        !important;
+	opacity    : 1           !important;
 }
 
 #nav-bar{
-  border-inline: var(--uc-window-drag-space-width) solid var(--toolbar-bgcolor);
+	border-inline: var(--uc-window-drag-space-width) solid var(--toolbar-bgcolor);
 }
 #new-tab-button, #alltabs-button, #scrollbutton-down, .tab-loading-burst{
-  display: none;
+	display: none;
 }
 #titlebar {
-  overflow: none !important;
+	overflow: none !important;
 }
 
 /* Source file https://github.com/MrOtherGuy/firefox-csshacks/tree/master/chrome/hide_tabs_with_one_tab.css made available under Mozilla Public License v. 2.0
@@ -98,24 +98,24 @@ See the above repository for updates as well as full license text. */
 :root:not([customizing]) #tabs-newtab-button,
 :root:not([customizing]) #TabsToolbar-customization-target > .toolbarbutton-1,
 :root:not([customizing]) #TabsToolbar .titlebar-button{
-  -moz-appearance: none !important;
-  height: 0px;
-  padding-top: 0px !important;
-  padding-bottom: 0px !important;
-  -moz-box-align: stretch;
-  margin: 0 !important;
+	-moz-appearance: none !important;
+	height: 0px;
+	padding-top: 0px !important;
+	padding-bottom: 0px !important;
+	-moz-box-align: stretch;
+	margin: 0 !important;
 }
 
 .accessibility-indicator,
 .private-browsing-indicator{ 
-  height: unset !important;
+	height: unset !important;
 }
 .accessibility-indicator > hbox{ padding-block: 0 !important }
 
 #tabbrowser-tabs .tabbrowser-tab{ height: var(--tab-min-height) }
 
 #tabbrowser-tabs .tabbrowser-tab[first-visible-tab="true"][last-visible-tab="true"]{
-  visibility: collapse !important;
+	visibility: collapse !important;
 }
 
 /* Button re-styling */
@@ -124,21 +124,21 @@ See the above repository for updates as well as full license text. */
 
 #tabs-newtab-button > .toolbarbutton-icon,
 #tabbrowser-tabs .tabs-newtab-button > .toolbarbutton-icon{
-  padding: 0 !important;
-  transform: scale(0.6);
-  background-color: transparent !important;
+	padding: 0 !important;
+	transform: scale(0.6);
+	background-color: transparent !important;
 }
 /* Extra top padding  in maximized window */
 @media (-moz-os-version: windows-win10){
-  :root[sizemode="maximized"] #navigator-toolbox{ padding-top:7px !important; }
+	:root[sizemode="maximized"] #navigator-toolbox{ padding-top:7px !important; }
 }
 /* Fix window controls not being clickable */
 :root[tabsintitlebar] #toolbar-menubar[autohide="true"][inactive]{
-  transition: height 0ms steps(1) 80ms;
+	transition: height 0ms steps(1) 80ms;
 }
 #nav-bar{
-  border-inline: var(--uc-window-drag-space-width) solid var(--toolbar-bgcolor);
+	border-inline: var(--uc-window-drag-space-width) solid var(--toolbar-bgcolor);
 }
 #navigator-toolbox {
-  appearance: toolbar !important; /* Pretty much anything except none */
+	appearance: toolbar !important; /* Pretty much anything except none */
 }
