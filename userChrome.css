@@ -17,6 +17,7 @@
 	--tab-font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; /* The font used for the tab labels */
 	--max-tab-width: none; /* The maximum width a tab in the tab bar can use. Set this to none for no limit */
 	--show-titlebar-buttons: none; /* Hide the buttons (close/minimize/maximize) in the title bar. Required on some platforms (e.g macOS) to fully hide the title bar. `none` hides them, `block` shows them */
+	--tab-height: 20px;
 }
 
 /* Minima Source Code. Here be dragons. */
@@ -26,9 +27,7 @@
 	display: var(--show-titlebar-buttons);
 }
 
-
 :root:not([customizing]) #TabsToolbar {
-	max-height: 17px !important;
 	margin-left: 1px !important;
 	margin-right: 1px !important;
 	border-radius: 0 !important;
@@ -36,20 +35,24 @@
 }
 .tabbrowser-tab * {
 	margin:0 !important;
-	padding:0 !important;
 	border-radius: 0 !important;
-	height: 15px !important;
 	font-family: var(--tab-font-family) !important;
 }
 .tabbrowser-tab {
-	min-height: 12px !important;
+	height: var(--tab-height);
 	font-size: var(--tab-font-size) !important;
+	min-height: 0 !important;
 }
 .tabbrowser-tab[fadein]:not([pinned]) {
 	max-width: var(--max-tab-width) !important;
 }
-.tab-close-button, .new-tab-button, #firefox-view-button {
+.tab-close-button, .new-tab-button, #firefox-view-button, #scrollbutton-up {
 	display: none !important;
+}
+.tab-icon-image {
+	height: auto !important;
+	width: calc(var(--tab-height) / 1.5) !important;
+	margin-right: 4px !important;
 }
 
 #tabs-newtab-button, #titlebar spacer {
@@ -111,8 +114,6 @@ See the above repository for updates as well as full license text. */
 	height: unset !important;
 }
 .accessibility-indicator > hbox{ padding-block: 0 !important }
-
-#tabbrowser-tabs .tabbrowser-tab{ height: var(--tab-min-height) }
 
 #tabbrowser-tabs .tabbrowser-tab[first-visible-tab="true"][last-visible-tab="true"]{
 	visibility: collapse !important;
