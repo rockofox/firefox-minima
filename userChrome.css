@@ -46,7 +46,7 @@
 .tabbrowser-tab[fadein]:not([pinned]) {
 	max-width: var(--max-tab-width) !important;
 }
-.tab-close-button, .new-tab-button, #firefox-view-button, #scrollbutton-up {
+.tab-close-button, .new-tab-button, #firefox-view-button, #scrollbutton-up, .tab-secondary-label {
 	display: none !important;
 }
 .tab-icon-image {
