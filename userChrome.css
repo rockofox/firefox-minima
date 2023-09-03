@@ -42,6 +42,7 @@
 	height: var(--tab-height);
 	font-size: var(--tab-font-size) !important;
 	min-height: 0 !important;
+	align-items: center !important;
 }
 .tabbrowser-tab[fadein]:not([pinned]) {
 	max-width: var(--max-tab-width) !important;
