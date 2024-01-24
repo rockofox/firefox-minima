@@ -143,4 +143,5 @@ See the above repository for updates as well as full license text. */
 }
 #navigator-toolbox {
 	appearance: toolbar !important; /* Pretty much anything except none */
+	border: none !important;
 }
