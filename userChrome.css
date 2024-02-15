@@ -23,6 +23,25 @@
 /* Minima Source Code. Here be dragons. */
 /* Only change this if you know what you're doing */
 
+tab[muted] .tab-label::before {
+	background-image:  url("chrome://browser/skin/tabbrowser/tab-audio-muted-small.svg");
+	background-size:100% 100%;
+	display: inline-block;
+	min-width: 12px;
+	width: var(--tab-font-size);
+	height: auto;
+	content:"\00a0";
+	position: relative;
+	-moz-context-properties: fill, fill-opacity, stroke;
+	fill: currentColor;
+	stroke: transparent;
+	margin-right: 0.2em;
+}
+
+tab:hover[muted] .tab-label::before {
+    display: none;
+}
+
 .titlebar-buttonbox-container {
 	display: var(--show-titlebar-buttons);
 }
