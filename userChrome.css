@@ -74,6 +74,10 @@ tab:hover[muted] .tab-label::before {
 	max-width: var(--max-tab-width) !important;
 }
 
+.tabbrowser-tab[pinned] .tab-content {
+	height: var(--tab-height) !important;
+}
+
 .tab-close-button,
 .new-tab-button,
 #firefox-view-button,
