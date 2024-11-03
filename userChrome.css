@@ -96,6 +96,7 @@ tab:hover[muted] .tab-label::before {
 
 :root:not([customizing]) #nav-bar,
 :root:not([customizing]) #urlbar[popover] {
+	pointer-events: none;
 	margin: 0 0 -40px !important;
 	opacity: 0 !important;
 }
@@ -104,6 +105,7 @@ tab:hover[muted] .tab-label::before {
 :root:not([customizing]) #urlbar[popover]:focus-within,
 :root:not([customizing]) #nav-bar:has(#urlbar[popover]:focus-within),
 :root:not([customizing]) #nav-bar:focus-within #urlbar[popover] {
+	pointer-events: auto;
 	margin: 0 0 auto !important;
 	opacity: 1 !important;
 }
