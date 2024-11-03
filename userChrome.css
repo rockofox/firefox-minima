@@ -90,7 +90,7 @@ tab:hover[muted] .tab-label::before {
 
 #tabs-newtab-button,
 #titlebar spacer,
-#alltabs-button {
+#alltabs-button, #scrollbutton-down, #new-tab-button {
 	display: none !important;
 }
 
