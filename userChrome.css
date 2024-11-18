@@ -68,14 +68,11 @@ tab:hover[muted] .tab-label::before {
 	font-size: var(--tab-font-size) !important;
 	min-height: 0 !important;
 	align-items: center !important;
+	margin-bottom: 5px !important;
 }
 
 .tabbrowser-tab[fadein]:not([pinned]) {
 	max-width: var(--max-tab-width) !important;
-}
-
-.tabbrowser-tab[pinned] .tab-content {
-	height: var(--tab-height) !important;
 }
 
 .tab-close-button,
